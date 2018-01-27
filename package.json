@@ -1,10 +1,14 @@
-
 {
   "name": "react-native-stripe",
   "version": "0.0.1",
   "description": "Stripe module for react-native",
   "main": "index.js",
-  "files": ["README.md", "index.js", "ios", "android"],
+  "files": [
+    "README.md",
+    "index.js",
+    "ios",
+    "android"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +19,10 @@
   "license": "MIT",
   "peerDependencies": {
     "react-native": "^0.41.2"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "flow": "^0.2.3",
+    "prettier": "^1.10.2"
   }
 }
