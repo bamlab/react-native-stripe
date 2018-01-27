@@ -1,6 +1,7 @@
 // @flow
 import React, { PureComponent } from 'react';
 import { StyleSheet, View, Modal, Button, TouchableOpacity, Text } from 'react-native';
+import { CreditCardInput } from 'react-native-credit-card-input';
 import { compose, withState, withProps } from 'recompose';
 
 type Props = {
@@ -27,6 +28,7 @@ class Manual extends PureComponent<Props> {
         >
           <View style={styles.modal}>
             <CloseButton onPress={this.props.closeCardModal} />
+            <CreditCardInput onChange={this.props.onCardEdit} />
             <Button title="Add Card" onPress={this.props.addCard} />
           </View>
         </Modal>
@@ -49,9 +51,12 @@ const styles = StyleSheet.create({
 
 export default compose(
   withState('isCardModalOpened', 'setIsCardModalOpened', false),
+  withState('creditCard', 'onCardEdit', null),
   withProps(({ setIsCardModalOpened }) => ({
     openCardModal: () => setIsCardModalOpened(true),
     closeCardModal: () => setIsCardModalOpened(false),
-    addCard: () => {},
+    addCard: () => {
+      setIsCardModalOpened(false);
+    },
   }))
 )(Manual);
