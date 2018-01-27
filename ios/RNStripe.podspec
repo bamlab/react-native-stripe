@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.version      = "1.0.0"
   s.summary      = "RNStripe"
   s.description  = <<-DESC
-                  RNStripe
+                  Stripe module for react-native
                    DESC
   s.homepage     = ""
   s.license      = "MIT"

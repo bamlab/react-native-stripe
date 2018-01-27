@@ -1,6 +1,10 @@
 
 # react-native-stripe
 
+Basic Stripe integration with React Native.
+
+The project jest started, feel free to contribute.
+
 ## Getting started
 
 `$ npm install react-native-stripe --save`
@@ -33,15 +37,6 @@
   	```
       compile project(':react-native-stripe')
   	```
-
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNStripe.sln` in `node_modules/react-native-stripe/windows/RNStripe.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Stripe.RNStripe;` to the usings at the top of the file
-  - Add `new RNStripePackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
 
 ## Usage
 ```javascript
