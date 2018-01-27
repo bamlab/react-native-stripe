@@ -14,6 +14,9 @@ export default StackNavigator(
     },
     custom: {
       screen: Custom,
+      navigationOptions: {
+        title: 'Add Card',
+      },
     },
   },
   {
