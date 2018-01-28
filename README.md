@@ -3,7 +3,7 @@
 
 Basic Stripe integration with React Native.
 
-The project jest started, feel free to contribute.
+The project just started, feel free to contribute.
 
 ## Getting started
 
