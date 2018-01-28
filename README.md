@@ -9,19 +9,32 @@ The project just started, feel free to contribute.
 
 `$ npm install react-native-stripe --save`
 
-### Mostly automatic installation
-
-`$ react-native link react-native-stripe`
-
-### Manual installation
-
+### Installation
 
 #### iOS
 
-1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `react-native-stripe` and add `RNStripe.xcodeproj`
-3. In XCode, in the project navigator, select your project. Add `libRNStripe.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
-4. Run your project (`Cmd+R`)<
+1. Settup cocoapod if not done yet.
+2. Add in your podfile, the following lines :
+```
+  pod 'react-native-stripe', path: '../../..'
+  pod 'yoga', path: '../node_modules/react-native/ReactCommon/yoga/yoga.podspec'
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'RCTActionSheet',
+    'RCTAnimation',
+    'RCTGeolocation',
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTNetwork',
+    'RCTSettings',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+    'DevSupport'
+  ]
+```
+3. Run `pod install` in your `ios/` folder.
+
 
 #### Android
 
@@ -40,9 +53,19 @@ The project just started, feel free to contribute.
 
 ## Usage
 ```javascript
-import RNStripe from 'react-native-stripe';
+import Stripe from 'react-native-stripe';
 
-// TODO: What to do with the module?
-RNStripe;
+Stripe.init({
+  publishableKey: 'pk_...',
+});
+
+Stripe.createTokenWithCard({
+    number: '4111 1111 1111 1111',
+    cvc: '123',
+    expMonth: 11,
+    expYear: 22,
+}).then(res => {
+  console.log(res.token);
+});
 ```
   
