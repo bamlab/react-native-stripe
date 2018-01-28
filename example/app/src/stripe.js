@@ -16,7 +16,19 @@ class Localstripe {
       cvc,
       expMonth,
       expYear,
-    }).then(res => console.log(res));
+    })
+      .then(res => {
+        console.log(res);
+        return fetch('http://localhost:3000/', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json, text/plain, */*',
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ token: res.tokenId }),
+        });
+      })
+      .then(cards => console.log('cards', cards));
   }
 }
 
