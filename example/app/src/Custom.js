@@ -3,6 +3,7 @@ import React, { PureComponent } from 'react';
 import { StyleSheet, View, Modal, Button, TouchableOpacity, Text } from 'react-native';
 import { CreditCardInput } from 'react-native-credit-card-input';
 import { compose, withState, withProps } from 'recompose';
+import stripe from './stripe';
 
 type Props = {
   openCardModal: () => any,
@@ -52,10 +53,11 @@ const styles = StyleSheet.create({
 export default compose(
   withState('isCardModalOpened', 'setIsCardModalOpened', false),
   withState('creditCard', 'onCardEdit', null),
-  withProps(({ setIsCardModalOpened }) => ({
+  withProps(({ setIsCardModalOpened, creditCard }) => ({
     openCardModal: () => setIsCardModalOpened(true),
     closeCardModal: () => setIsCardModalOpened(false),
     addCard: () => {
+      stripe.addCard(creditCard);
       setIsCardModalOpened(false);
     },
   }))

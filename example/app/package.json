@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest"
+    "test": "jest",
+    "run-ios": "yarn add ../.. && rm -fR node_modules/react-native-stripe/example && react-native run-ios"
   },
   "dependencies": {
     "react": "16.2.0",
-    "react-native": "0.52.2",
+    "react-native": "^0.52.2",
     "react-native-credit-card-input": "^0.4.1",
+    "react-native-stripe": "../..",
     "react-navigation": "^1.0.0-beta.27",
     "recompose": "^0.26.0"
   },

@@ -1,0 +1,73 @@
+PODS:
+  - React (0.52.2):
+    - React/Core (= 0.52.2)
+  - react-native-stripe (0.0.1):
+    - React
+    - Stripe
+  - React/Core (0.52.2):
+    - yoga (= 0.52.2.React)
+  - React/DevSupport (0.52.2):
+    - React/Core
+    - React/RCTWebSocket
+  - React/fishhook (0.52.2)
+  - React/RCTActionSheet (0.52.2):
+    - React/Core
+  - React/RCTAnimation (0.52.2):
+    - React/Core
+  - React/RCTBlob (0.52.2):
+    - React/Core
+  - React/RCTGeolocation (0.52.2):
+    - React/Core
+  - React/RCTImage (0.52.2):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.52.2):
+    - React/Core
+  - React/RCTNetwork (0.52.2):
+    - React/Core
+  - React/RCTSettings (0.52.2):
+    - React/Core
+  - React/RCTText (0.52.2):
+    - React/Core
+  - React/RCTVibration (0.52.2):
+    - React/Core
+  - React/RCTWebSocket (0.52.2):
+    - React/Core
+    - React/fishhook
+    - React/RCTBlob
+  - Stripe (11.5.0)
+  - yoga (0.52.2.React)
+
+DEPENDENCIES:
+  - react-native-stripe (from `../../..`)
+  - React/Core (from `../node_modules/react-native`)
+  - React/DevSupport (from `../node_modules/react-native`)
+  - React/RCTActionSheet (from `../node_modules/react-native`)
+  - React/RCTAnimation (from `../node_modules/react-native`)
+  - React/RCTGeolocation (from `../node_modules/react-native`)
+  - React/RCTImage (from `../node_modules/react-native`)
+  - React/RCTLinkingIOS (from `../node_modules/react-native`)
+  - React/RCTNetwork (from `../node_modules/react-native`)
+  - React/RCTSettings (from `../node_modules/react-native`)
+  - React/RCTText (from `../node_modules/react-native`)
+  - React/RCTVibration (from `../node_modules/react-native`)
+  - React/RCTWebSocket (from `../node_modules/react-native`)
+  - yoga (from `../node_modules/react-native/ReactCommon/yoga/yoga.podspec`)
+
+EXTERNAL SOURCES:
+  React:
+    :path: ../node_modules/react-native
+  react-native-stripe:
+    :path: ../../..
+  yoga:
+    :path: ../node_modules/react-native/ReactCommon/yoga/yoga.podspec
+
+SPEC CHECKSUMS:
+  React: 43e97926f429d846050880666de1809e22dd5cc5
+  react-native-stripe: cd15f19c9fc2aa4ed330e47fa37cf45a8882d14a
+  Stripe: 10761682d20dc491c52287393c800db056c9748d
+  yoga: 55da126afc384965b96bff46652464373b330add
+
+PODFILE CHECKSUM: 8116487be51ff071793adc63a859f13ec6838a8d
+
+COCOAPODS: 1.4.0
