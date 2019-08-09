@@ -1,6 +1,6 @@
 require 'json'
 
-package = JSON.parse(File.read(File.join(__dir__, 'package.json')))
+package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
   s.name           = package['name']
@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.license        = package['license']
   s.author         = package['author']
   s.homepage       = package['homepage']
-  s.source         = { :git => "https://github.com/bamlab/react-native-stripe.git", :tag => "master" }
+  s.source         = { :git => "https://github.com/midrive/react-native-stripe.git", :tag => "master" }
 
   s.requires_arc = true
   s.platform     = :ios, "8.0"
