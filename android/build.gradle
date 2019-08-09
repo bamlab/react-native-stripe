@@ -17,6 +17,6 @@ android {
 }
 
 dependencies {
-    implementation "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
+    api "com.facebook.react:react-native:${safeExtGet('reactNativeVersion', '+')}"
     implementation 'com.stripe:stripe-android:7.1.0'
 }
